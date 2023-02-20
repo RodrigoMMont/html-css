@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://www.instagram.com/rodrigo.mmonteiro/" target="_blank" rel="external"> meu instagram</a></p> 
+                                    <!--target="_blank" rel="external" é para abrir o link em outra aba, ele não vai sobrepor o site-->
+                                    <!--a: ancora-->
+    <p>Você tambem pode acessar o <a href="https://www.facebook.com/rodrigo.martins.90410">meu Facebook</a></p> <!-- sem o targer ele vai sobrepor-->
+     <h1>Usando links internos</h1>
+     <p>Esta é a primeira página do site. 
+        Se você quiser, pode acessar tambem a minha <a href="pag002.html" rel="next">segunda página</a>.</p> <!--Quando é link interno não precsio da url inteira, só dizer qual é o arquivo.
+        contando que a segunda página esteja na mesma pasta.   rel="next:" próximo site-->
+        <!--rel="" ajuda no mecânismo de busca, visualmente não da nenhuma diferença.. mas ele tem um valor semântico. o mecânismo de busca
+        entende melhor e repassa no site melhor. Então é muito importante-->
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" target="_self">página de notícias</a></p> <!--target="_self": abrir na minha própria página-->
+
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/RODRIGO CURRICULO  ST.pdf" download="RODRIGO CURRICULO ST.pdf">Baixar o curríclo PDF</a></li> 
+        <!--se não colocar download="" ele apenas abre o arquivo-->
+        <!--outra configuração: type="application/pdf"-->
+        <li><a href="livro/RODRIGO CURRICULO  ST.zip" type="application/zip">Currículo compactado em .zip</a></li> <!-- usando type="application/zip"-->
+    </ul>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes
+         ou simplesmente aumente e diminua o tamanho do seu navegador.
+    </p>
+
+    <picture>
+        <source media="(max-width: 700px)" srcset="imagens/img-p.jpg" type="image/jpg"> <!--max-width: o  tamanho de minha img de tag de baixo e mais 200px pra compensar a folga da barra de rolagem (tem que ajustando a cada imagem)-->
+        <source media="(max-width: 1280px)" srcset="imagens/img-m.jpg" type="image/jpg"> <!--Ele vai carregar a foto grande, mas se o dispositivo for menor do que 1050px ele vai carregar a foto m-->
+        <img src="Imagens/img-g.jpg" alt="foto flexível">
+        <!--Tem que seguir a orderm de tamanho do menor para o maior-->
+        <!--A foto que eu quero tem ficar em baixo e as otras sources tem q ir colocando por cima-->
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudio em HTML5.</p>
+    <audio src="midia/icefire.mp3" controls autoplay loop></audio> <!--desta forma ele ele vai aparecer o botão de play. loop: se quiser deixar uma musiquinha de fundo, quando acabar a musica vai voltar do começo-->
+    <!--Formatos compatíveis: MP3  WAV  OGG-->
+    <audio preload="auto" autoplay> <!-- desta forma ele vai tocar automatico-->
+        <source src="midia/icefire.mp3" type="audio/mpeg"> <!--existem vários tipos de type para cada formato de mídia, tem que consultar-->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.mp3" type="audio/wav">
+        <!--a ordem é muito importante, de cima para baixo-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio.
+            <a href="midia/guanacast-33.mp3">clique aqui para baixar o arquivo MP3.</a>
+        </p>
+    </audio>
+
+</body>
+</html>
